@@ -1,0 +1,82 @@
+.div-body {
+  background-color: rgb(183, 179, 230);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .box {
+    background-color: #004d54;
+    height: 500px;
+    width: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    .center-div {
+      .header {
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 10px solid rgb(183, 179, 230);
+        color: rgb(255, 255, 255);
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+      }
+      .div-input {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input {
+          width: 300px;
+          padding-left: 30px;
+          color: white;
+          font-size: 20px;
+          &::placeholder {
+            color: rgb(77, 255, 0);
+            opacity: 1;
+            font-weight: bolder;
+            font-size: 20px;
+          }
+        }
+      }
+      .btnp {
+        border-radius: 10px;
+        background-color: rgb(183, 179, 230);
+      }
+      .edit {
+        color: white;
+      }
+    }
+    .listing {
+      margin-top: 10px;
+      color: rgb(241, 241, 241);
+      padding: 0 5px;
+
+      ol {
+        margin: 10px 0;
+        padding: 0 18px;
+        list-style-type: none;
+      }
+      .list-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+          font-size: 25px;
+        }
+
+        .items {
+          display: flex;
+          gap: 8px;
+        }
+      }
+    }
+  }
+  .remove {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: rgb(183, 179, 230);
+  }
+}
