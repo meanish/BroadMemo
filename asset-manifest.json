@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/BroadMemo/static/css/main.5e5f77c1.css",
-    "main.js": "/BroadMemo/static/js/main.7db6dce7.js",
+    "main.css": "/BroadMemo/static/css/main.fcec3ef5.css",
+    "main.js": "/BroadMemo/static/js/main.9b3639c3.js",
     "static/js/787.97a945da.chunk.js": "/BroadMemo/static/js/787.97a945da.chunk.js",
     "index.html": "/BroadMemo/index.html",
-    "main.5e5f77c1.css.map": "/BroadMemo/static/css/main.5e5f77c1.css.map",
-    "main.7db6dce7.js.map": "/BroadMemo/static/js/main.7db6dce7.js.map",
+    "main.fcec3ef5.css.map": "/BroadMemo/static/css/main.fcec3ef5.css.map",
+    "main.9b3639c3.js.map": "/BroadMemo/static/js/main.9b3639c3.js.map",
     "787.97a945da.chunk.js.map": "/BroadMemo/static/js/787.97a945da.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e5f77c1.css",
-    "static/js/main.7db6dce7.js"
+    "static/css/main.fcec3ef5.css",
+    "static/js/main.9b3639c3.js"
   ]
 }
