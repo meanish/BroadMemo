@@ -1,12 +1,12 @@
 .div-body {
-  background-color: rgb(183, 179, 230);
+  background-color: #2d3a78;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .box {
-    background-color: #004d54;
+    background-color: #eddedf;
     height: 500px;
     width: 450px;
     border-radius: 15px;
@@ -16,9 +16,9 @@
       .header {
         text-align: center;
         text-transform: uppercase;
-        border-bottom: 10px solid rgb(183, 179, 230);
-        color: rgb(255, 255, 255);
-        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        border-bottom: 10px solid #2d3a78;
+        color: rgb(33, 17, 17);
+        text-shadow: 5px 5px 5px rgb(255, 255, 255);
       }
       .div-input {
         padding: 20px 0;
@@ -28,10 +28,9 @@
         input {
           width: 300px;
           padding-left: 30px;
-          color: white;
+          color: #464555;
           font-size: 20px;
           &::placeholder {
-            color: rgb(77, 255, 0);
             opacity: 1;
             font-weight: bolder;
             font-size: 20px;
@@ -43,13 +42,12 @@
         background-color: rgb(183, 179, 230);
       }
       .edit {
-        color: white;
+        color: #464555;
       }
     }
     .listing {
       margin-top: 10px;
-      color: rgb(241, 241, 241);
-      padding: 0 5px;
+      color: #464555;
 
       ol {
         margin: 10px 0;
@@ -60,6 +58,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        transform: scale(0.95);
+        transition: box-shadow 0.5s, transform 0.5s;
+
+        &:hover {
+          transform: scale(1);
+          box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+          color:white;
+          background-color: #2d3a78;
+        }
         h1 {
           font-size: 25px;
         }
@@ -67,16 +74,28 @@
         .items {
           display: flex;
           gap: 8px;
+
+          .icon-red {
+            color: #ff0000;
+          }
+          .icon-blue {
+            color: #2578af;
+          }
         }
       }
     }
   }
   .remove {
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
+    border:none;
     display: flex;
     justify-content: center;
     width: 100%;
-    color: rgb(183, 179, 230);
+
+    .remo {
+      background-color: #2d3a78;
+      color: #eddedf;
+    }
   }
 }

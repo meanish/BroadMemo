@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@mui/icons-material/Add";
@@ -19,7 +19,19 @@ function Todoadv() {
   };
 
   // state stores array for the list of our provided data
-  const [newItems, newStateItems] = useState([]);
+  const [newItems, newStateItems] = useState(() => {
+    // getting stored value
+    const initialValue = JSON.parse(localStorage.getItem("getitems"));
+    return initialValue || [];
+  });
+
+  //localstorage set
+
+  useEffect(() => {
+    localStorage.setItem('getitems', JSON.stringify(newItems));
+  }, [newItems]);
+
+
 
   // toggle button add button convert to edit on ce we edit true is default
   const [toggleAdd, newtoggleAdd] = useState(true);
@@ -30,8 +42,10 @@ function Todoadv() {
   // add button press vayepoxi ko function
   const itemList = () => {
     if (!inputData) {
+
       //empty field ma enter garyo vaney
       alert("Enter a Item");
+
     } else if (inputData && !toggleAdd) {
       newStateItems(
         newItems.map((elem) => {
@@ -109,7 +123,7 @@ function Todoadv() {
               {toggleAdd ? (
                 <Button
                   variant="outlined"
-                  color="secondary"
+
                   className="btnp"
                   onClick={itemList}
                 >
@@ -128,8 +142,8 @@ function Todoadv() {
                 <div key={val.id} className="list-body">
                   <h1>{val.name}</h1>
                   <div className="items">
-                    <DeleteIcon onClick={() => deleteItem(val.id)}></DeleteIcon>
-                    <EditIcon onClick={() => editMe(val.id)}></EditIcon>
+                    <DeleteIcon onClick={() => deleteItem(val.id)} className="icon-red"></DeleteIcon>
+                    <EditIcon onClick={() => editMe(val.id)} className="icon-blue"></EditIcon>
                   </div>
                 </div>
               );
@@ -137,7 +151,7 @@ function Todoadv() {
           </div>
 
           <div className="remove">
-            <Button variant="contained" onClick={removeAll}>
+            <Button variant="contained" onClick={removeAll} className="remo">
               Remove all
             </Button>
           </div>
